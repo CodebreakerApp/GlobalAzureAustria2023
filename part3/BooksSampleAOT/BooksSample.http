@@ -1,0 +1,30 @@
+﻿@BooksSample_HostAddress = http://localhost:5000
+
+### Get all books
+
+Get {{BooksSample_HostAddress}}/books/
+
+### Get a book by id
+
+GET {{BooksSample_HostAddress}}/books/1
+
+### Create a book
+
+POST {{BooksSample_HostAddress}}/books/
+Content-Type: application/json
+
+{
+  "title": "Pragmatic Microservices with C# and Azure",
+  "publisher": "Packt Publishing"
+}
+
+### Update a book
+
+PUT {{BooksSample_HostAddress}}/books/24
+Content-Type: application/json
+
+{
+  "bookId": 24,
+  "title": "Professional C# and .NET - 2024 Edition",
+  "publisher": "Wrox Press"
+}
