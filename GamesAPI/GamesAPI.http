@@ -1,0 +1,49 @@
+﻿@GamesAPI_HostAddress = https://localhost:7005
+@PlayerName = "testuser"
+
+
+### Start a game
+# @name startGameRequest
+POST {{GamesAPI_HostAddress}}/games
+Content-Type: application/json
+
+{
+  "gameType": "Game6x4",
+  "playerName": {{PlayerName}}
+}
+
+### Get all games
+
+GET {{GamesAPI_HostAddress}}/games
+
+### 
+
+@GameId = {{startGameRequest.response.body.gameId}}
+
+### Set a move
+PUT {{GamesAPI_HostAddress}}/games/{{GameId}}/moves
+Content-Type: application/json
+
+{
+  "gameId": {{GameId}},
+  "gameType": "Game6x4",
+  "playerName": {{PlayerName}},
+  "moveNumber": 1,
+  "colorGuessPegs": [
+    {
+      "color": "Red"
+    },
+    {
+      "color": "Blue"
+    },
+    {
+      "color": "Yellow"
+    },
+    {
+      "color": "Green"
+    }
+  ],
+  "shapeGuessPegs": [
+
+  ]
+}
