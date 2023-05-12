@@ -22,11 +22,6 @@ builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.AddContext<AppJsonSerializerContext>();
 });
 
-builder.Services.Configure<JsonOptions>(options =>
-{
-    options.SerializerOptions.AddContext<AppJsonSerializerContext>();
-});
-
 builder.Services.Configure<Microsoft.AspNetCore.Mvc.JsonOptions>(options =>
 {
     options.JsonSerializerOptions.AddContext<AppJsonSerializerContext>();
