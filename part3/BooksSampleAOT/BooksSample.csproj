@@ -8,7 +8,6 @@
     <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
     <PublishAot>true</PublishAot>
-    <ContainerImageName>globalazure-bookssample-aot</ContainerImageName>
   </PropertyGroup>
 
   <ItemGroup>

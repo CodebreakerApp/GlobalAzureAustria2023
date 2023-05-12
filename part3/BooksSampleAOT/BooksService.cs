@@ -10,7 +10,7 @@ public class BooksService : IBooksRepository
     public BooksService()
     {
         var books = 
-            Enumerable.Range(0, 100)
+            Enumerable.Range(1, 30)
                 .Select(i => 
                     new KeyValuePair<int, Book>(i, new Book(i, $"title {i}", "pub")));
         _books = new ConcurrentDictionary<int, Book>(books);

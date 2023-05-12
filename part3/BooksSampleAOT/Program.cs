@@ -5,7 +5,7 @@ using BooksSample;
 
 using Microsoft.AspNetCore.Http.Json;
 
-var startTime = Stopwatch.GetTimestamp();
+long startTime = Stopwatch.GetTimestamp();
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
